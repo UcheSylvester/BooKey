@@ -6,8 +6,8 @@ body, html {
   }
   
   body{
-      background-color: grey;
-      color: black;
+      background-color: black;
+      color: grey;
   }
   
   
@@ -43,6 +43,22 @@ body, html {
 	height: 3.5em;
 	width: 5.5em;
 }
+
+
+/* MAIN */
+
+h1 {
+    font-family: lobster;
+}
+
+.description {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: lobster;
+}
+
+
 
 /* .menu {
     font-size: 1.5em;
