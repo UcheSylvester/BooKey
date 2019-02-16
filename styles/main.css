@@ -6,8 +6,8 @@ body, html {
   }
   
   body{
-      background-color: black;
-      color: grey;
+      background-color: darkgreen;
+      color: white;
   }
   
   
@@ -22,7 +22,7 @@ body, html {
   /* HEADER */
 
   header {
-      background-color: firebrick;
+      background-color: white;
       width: 100%;
   }
 
@@ -49,21 +49,18 @@ body, html {
 
 h1 {
     font-family: lobster;
+    font-size: 3em
 }
 
 .description {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: 1em;
     margin-bottom: 3em;
     font-family: lobster;
 }
 
 
-
-/* .menu {
-    font-size: 1.5em;
-} */
-
-/* input {
-    background-color: lightgray
-} */
+#searchButton {
+    background-color: white;
+    color: darkgreen
+}
