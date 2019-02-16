@@ -6,7 +6,7 @@ body, html {
   }
   
   body{
-      background-color: darkgreen;
+      background-color: navy;
       color: white;
   }
   
@@ -59,8 +59,17 @@ h1 {
     font-family: lobster;
 }
 
+/* SearchInputs and Button */
 
 #searchButton {
     background-color: white;
-    color: darkgreen
+    color: navy;
+    border-radius: 5px;
+    width: 8em;
+    
+}
+
+#searchInput {
+    width: 25em;
+    
 }
