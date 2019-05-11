@@ -7,7 +7,7 @@ body, html {
   
   body{
       margin: 0;
-      background-color: navy;
+      background-color: rgb(35, 35, 117);
       color: white;
   }
   
@@ -72,5 +72,19 @@ h1 {
 
 #searchInput {
     width: 25em;
+    color: rgb(36, 33, 33);
     
+    
+}
+
+
+/* RESPONSE CONTAINER */
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+#responseContainer h3 a {
+    color: white
 }
