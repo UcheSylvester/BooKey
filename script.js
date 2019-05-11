@@ -31,8 +31,8 @@
                         `<li>
                             <h3><a href="${book.volumeInfo.previewLink}" target="_blank">${book.volumeInfo.title}</a></h3>
                             <img src="${book.volumeInfo.imageLinks.thumbnail}" alt="${searchedForText}">
+                            <p>${book.volumeInfo.publishedDate}</p>                            
                             <p>${book.volumeInfo.authors}</p>
-                            <p>${book.publishedDate}</p>
                         </li>`
                     ).join('') + '</ul>'
 
