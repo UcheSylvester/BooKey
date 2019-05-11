@@ -6,6 +6,7 @@ body, html {
   }
   
   body{
+      margin: 0;
       background-color: navy;
       color: white;
   }
