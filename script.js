@@ -49,12 +49,19 @@
                 // TO DISPLAY BOOKS ON THE PAGE
                 function displayBooks(books) {
                     htmlContent = '<ul>' + books.map(book => 
-                        `<li class="card">
-                            <h3><a href="${book.volumeInfo.previewLink}" target="_blank">${book.volumeInfo.title}</a></h3>
-                            <img src="${book.volumeInfo.imageLinks.thumbnail}" alt="${searchedForText}">
-                            <p>${book.volumeInfo.publishedDate}</p>                            
-                            <p>${book.volumeInfo.authors}</p>
-                        
+                        `<li>
+                            <div class="card">
+                                <figure>
+                                <img src="${book.volumeInfo.imageLinks.thumbnail}" class="card-img-top" alt="${searchedForText}">
+                                <figcaption>${book.volumeInfo.authors} ${book.volumeInfo.publishedDate}</figcaption>
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title"><a href="${book.volumeInfo.previewLink}" target="_blank">${book.volumeInfo.title}</a></h3>
+                                    <span>${book.volumeInfo.subtitle ? book.volumeInfo.subtitle : ''}</span>
+                                    <p class="card-text">${book.searchInfo ? book.searchInfo.textSnippet : searchedForText}</p>
+                                    
+                                </div>                            
+                            </div>
                         </li>`
                     ).join('') + '</ul>'
                 }

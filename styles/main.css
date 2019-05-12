@@ -83,8 +83,19 @@ h1 {
 ul {
     list-style: none;
     text-align: center;
+    margin-top: 3em;
 }
 
 #responseContainer h3 a {
     color: white
+}
+
+
+/* CARD */
+
+div .card {
+    border: solid 2px red;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2em;
 }
