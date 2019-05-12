@@ -161,7 +161,7 @@ figcaption em {
 
 .card-body .subtitle {
     margin-top: -0.5em;
-    /* font-weight: bold; */
+    /* font-weipght: bold; */
     color: rgb(241, 241, 247);
     font-style: italic;
     /* font-size: 1em; */
@@ -171,5 +171,14 @@ figcaption em {
     margin-bottom: 0.5em;
     padding: 0.5em;
     font-size: 1.3em;    
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 540px) {
+    header {
+        display: none;
+    }
 }
 
