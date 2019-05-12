@@ -2,6 +2,10 @@
 (function() {
     console.log('working!')
 
+    // fetch('http://api.cloudpublish.co.uk/')
+    // .then(data => data.json())
+    // .then(r => console.log(r))
+
     const form = document.querySelector('#searchForm');
     const searchField = document.querySelector('#searchInput');
     const responseContainer = document.querySelector('#responseContainer');
@@ -53,12 +57,12 @@
                             <div class="card">
                                 <figure>
                                 <img src="${book.volumeInfo.imageLinks.thumbnail}" class="card-img-top" alt="${searchedForText}">
-                                <figcaption>${book.volumeInfo.authors} ${book.volumeInfo.publishedDate}</figcaption>
+                                <figcaption><strong>${book.volumeInfo.authors}</strong> <br> &#128197 <em>${book.volumeInfo.publishedDate}</em></figcaption>
                                 </figure>
                                 <div class="card-body">
                                     <h3 class="card-title"><a href="${book.volumeInfo.previewLink}" target="_blank">${book.volumeInfo.title}</a></h3>
-                                    <span>${book.volumeInfo.subtitle ? book.volumeInfo.subtitle : ''}</span>
-                                    <p class="card-text">${book.searchInfo ? book.searchInfo.textSnippet : searchedForText}</p>
+                                    <h4 class="subtitle">${book.volumeInfo.subtitle ? book.volumeInfo.subtitle : searchedForText}</h4>
+                                    <p class="card-text">${book.searchInfo ? book.searchInfo.textSnippet : 'A books on ' + searchedForText}</p>
                                     
                                 </div>                            
                             </div>
@@ -77,5 +81,7 @@
 
 
     })
+
+
 
 })()
