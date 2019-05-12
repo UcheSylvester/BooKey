@@ -161,8 +161,8 @@ figcaption em {
 
 .card-body .subtitle {
     margin-top: -0.5em;
-    font-weight: bold;
-    color: rgb(230, 230, 247);
+    /* font-weight: bold; */
+    color: rgb(241, 241, 247);
     font-style: italic;
     /* font-size: 1em; */
 }
