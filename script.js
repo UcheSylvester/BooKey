@@ -56,7 +56,7 @@
                         `<li>
                             <div class="card">
                                 <figure>
-                                <img src="${book.volumeInfo.imageLinks.thumbnail}" class="card-img-top" alt="${searchedForText}">
+                                <img src="${book.volumeInfo.imageLinks.thumbnail ? book.volumeInfo.imageLinks.thumbnail : 'No Image Avaiable'}" class="card-img-top" alt="${searchedForText}">
                                 <figcaption><strong>${book.volumeInfo.authors}</strong> <br> &#128197 <em>${book.volumeInfo.publishedDate}</em></figcaption>
                                 </figure>
                                 <div class="card-body">
