@@ -9,6 +9,8 @@
     const form = document.querySelector('#searchForm');
     const searchField = document.querySelector('#searchInput');
     const responseContainer = document.querySelector('#responseContainer');
+    const backToTop = document.querySelector('.back-to-top')
+    console.log(backToTop)
 
     // console.log(form, searchField, responseContainer);
 
@@ -58,8 +60,8 @@
                     `<li>
                         <div class="card">
                             <figure>
-                            <img src="${book.volumeInfo.imageLinks.thumbnail ? book.volumeInfo.imageLinks.thumbnail : 'No Image Avaiable'}" class="card-img-top" alt="${searchedForText}">
-                            <figcaption><strong>${book.volumeInfo.authors}</strong> <br> &#128197 <em>${book.volumeInfo.publishedDate}</em></figcaption>
+                            <img src="${book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ''}" class="card-img-top" alt="${searchedForText}">
+                            <figcaption><strong>${book.volumeInfo.authors ? book.volumeInfo.authors : ''}</strong> <br> &#128197 <em>${book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate : ''}</em></figcaption>
                             </figure>
                             <div class="card-body">
                                 <h3 class="card-title"><a href="${book.volumeInfo.previewLink}" target="_blank">${book.volumeInfo.title}</a></h3>
@@ -78,7 +80,7 @@
         }
 
         function requestError(e) {
-            const errorMessage = `<p>A <em>${e.message}</em> occured... Please, check internet connection and/or try again</p>`;
+            const errorMessage = `<div class="text-center">A <em>${e.message}</em> occured... Please, check internet connection and/or try again</div>`;
             // console.dir(e, e.message)
 
             if (!responseContainer.hasChildNodes()) {
@@ -93,6 +95,13 @@
 
     })
 
-    
+    window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'));
+
+    backToTop.addEventListener('click', () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
+
+
 
 })()

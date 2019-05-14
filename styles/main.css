@@ -209,7 +209,7 @@ figcaption em {
     background-color: inherit;
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     font-size: 2em;
     border-style: none;
     color: rgb(132, 132, 230);
