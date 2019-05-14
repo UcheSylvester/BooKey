@@ -3,6 +3,8 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    /* overflow: hidden; */
+    overflow-x: hidden;
   }
   
   body{
@@ -18,22 +20,13 @@ body, html {
 
   .container-fluid {
       padding: 0;
-      /* position: relative; */
   }
 
-  /* main {
-      position: relative;
-  } */
   
 
   /* HEADER */
 
-  /* header {
-      background-color: white;
-      width: 100%;
-  } */
-
-  .heading {
+  header {
       width: 100%;
       margin-top: -3em;
       padding: 0;
@@ -41,29 +34,37 @@ body, html {
   }
 
 .pull-right{
-	font-family: lobster;
-    font-size: 1.7em;
     padding-top: 1.2em;
 }
 
+.pull-right a {
+    color: rgb(35, 35, 117);
+    font-size: 2em;
+    font-weight: bolder;
+}
 
-.logo{
+
+/* .logo{
 	height: 3.5em;
 	width: 5.5em;
-}
+} */
 
 
 /* MAIN */
 
 h1 {
-    font-family: lobster;
-    font-size: 3em
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+    margin-top: 1.5em;
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase
 }
 
 .description {
     font-size: 2em;
-    margin-top: 1em;
     margin-bottom: 3em;
+    color: rgb(231, 231, 240);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -92,6 +93,8 @@ h1 {
 ul {
     list-style: none;
     text-align: center;
+    margin: 0;
+    padding: 0;
     margin-top: 3em;
 }
 
@@ -186,23 +189,6 @@ figcaption em {
 }
 
 
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 540px) {
-    header {
-        display: none;
-    }
-
-    div .card {
-        width: 80%;
-    }
-
-    div .card:hover {
-        width: 90%;
-    }
-}
-
-
 /* BACK TO TOP BUTTON */
 
 .back-to-top {
@@ -223,4 +209,33 @@ figcaption em {
     font-size: 3em;
     color: rgb(245, 245, 248);
 }
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 540px) {
+    header {
+        display: none;
+    }
+
+    div .card {
+        width: 80%;
+    }
+
+    div .card:hover {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 250px) {
+    #searchInput {
+        margin: 0;
+    }
+    #searchButton {
+        margin: 0;
+    }
+}
+
 
