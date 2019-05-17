@@ -76,7 +76,8 @@ h1 {
     margin-right: 1.5em;
     padding: 1.25em 2em;
     width: 55%;
-    color: rgb(35, 35, 117);
+    color: rgb(59, 53, 53);
+    /* color: rgb(35, 35, 117); */
     font-weight: bold;
 }
 
@@ -214,6 +215,7 @@ figcaption em {
     bottom: 40px;
     color: rgb(245, 245, 248);
 }
+
 
 .error-message {
     font-size: 1.5em;
