@@ -27,7 +27,7 @@ body, html {
   /* HEADER */
 
   header {
-      width: 100%;
+      /* width: 100%; */
       margin-top: -3em;
       padding: 0;
       background-color: white;
@@ -43,17 +43,75 @@ body, html {
     font-weight: bolder;
 }
 
-.hamburger {
-    margin-top: 20px;
+.last {
+    margin-right: 3em;
 }
 
 
+/* HAMBURGER AND SIDE MENU  */
 
+.hamburger svg {
+    float: left;
+    margin: 1.5em 0 0 1.5em;
+}
 
-/* .logo{
-	height: 3.5em;
-	width: 5.5em;
+.side-nav {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(57, 57, 136);
+    /* background-color: #111; */
+    /* margin-top: 6em; */
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    padding-bottom: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(217, 217, 238);
+    display: block;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.side-nav a:hover {
+    color: #fff;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    right: 23px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.side-nav .btn-close:hover {
+    font-size: 45px;
+}
+
+main {
+    transition: margin-top 0.5s;
+}
+
+/* .side-nav a {
+    float: left;
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 17px;
 } */
+
 
 
 /* MAIN */
@@ -200,7 +258,7 @@ figcaption em {
 /* BACK TO TOP BUTTON */
 
 .back-to-top {
-    transition: all 1s;
+    transition: 1s;
     background-color: inherit;
     position: fixed;
     bottom: 20px;
@@ -215,7 +273,7 @@ figcaption em {
 }
 
 .back-to-top:hover {
-    transition: all 1s;
+    transition: 1s;
     font-size: 3em;
     background-color: inherit;
     bottom: 40px;
@@ -232,10 +290,35 @@ figcaption em {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width: 540px) {
-    header {
+@media(max-width:700px) {
+    .pull-right a {
+        font-size: 1.6em;
+    }
+    
+    .last {
+        margin-right: auto;
+    }
+}
+
+@media(max-width: 570px) {
+    .nav li {
         display: none;
     }
+}
+
+@media(min-width:570px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 540px) {
 
     div .card {
         width: 80%;

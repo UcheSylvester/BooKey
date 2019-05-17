@@ -107,6 +107,32 @@
         document.documentElement.scrollTop = 0;
     })
 
+    // SIDE BAR
+
+    const hamburger = document.querySelector('.hamburger');
+    const closeButton = document.querySelector('.btn-close');
+    const mainContent = document.querySelector('main');
+    const sideMenu = document.querySelector('.side-nav');
+    console.log(hamburger, closeButton, mainContent, sideMenu);
+
+    // When the hamburger is clicked, we call openSideMenu
+    hamburger.addEventListener('click', openSideMenu);
+    
+    // Opens sideMenu by increasing its width and bringing down the main content
+    function openSideMenu() {
+        sideMenu.style.width = '100%';
+        mainContent.style.marginTop = '240px';
+
+        // mainContent.style.marginTop = '300px';
+    }
+
+    closeButton.addEventListener('click', closeSideMenu);
+    
+    function closeSideMenu() {
+        sideMenu.style.width = '0px';
+        mainContent.style.marginTop = '0px'
+    }
+
 
 
 })()
