@@ -44,7 +44,7 @@
                 }
 
             } else {
-                const errorMessage =  `<p class="text-center">Sorry.... There is no books for <em>${searchedForText}</em>. Check back later</p>`;
+                const errorMessage =  `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. Check back later</p>`;
                 // checking for initial search results and removing them
                 if(responseContainer.hasChildNodes()) {
                     responseContainer.firstElementChild.remove()
@@ -79,8 +79,10 @@
 
         }
 
+        // WHEN REQUEST FAILS
+
         function requestError(e) {
-            const errorMessage = `<div class="text-center">A <em>${e.message}</em> occured... Please, check internet connection and/or try again</div>`;
+            const errorMessage = `<div class="text-center error-message">A <em><strong>${e.message}</strong></em> occured... Please, check internet connection and try again</div>`;
             // console.dir(e, e.message)
 
             if (!responseContainer.hasChildNodes()) {
@@ -91,9 +93,10 @@
                 responseContainer.insertAdjacentHTML('afterbegin', errorMessage);
             }
         }
-
-
     })
+
+
+    // FOR THE BACK TO TOP BUTTON
 
     window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'));
 

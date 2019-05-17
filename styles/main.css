@@ -76,7 +76,8 @@ h1 {
     margin-right: 1.5em;
     padding: 1.25em 2em;
     width: 55%;
-    color: rgb(41, 37, 37);
+    color: rgb(35, 35, 117);
+    font-weight: bold;
 }
 
 #searchButton {
@@ -208,6 +209,11 @@ figcaption em {
     
     font-size: 3em;
     color: rgb(245, 245, 248);
+}
+
+.error-message {
+    font-size: 1.5em;
+    margin-top: 2em;
 }
 
 
