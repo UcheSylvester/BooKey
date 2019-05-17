@@ -100,8 +100,7 @@
     //     console.log('working');
     // })
 
-    window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'))
-
+    window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'));
 
     backToTop.addEventListener('click', () => {
         document.body.scrollTop = 0;
