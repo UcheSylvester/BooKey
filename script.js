@@ -1,6 +1,5 @@
 
 (function() {
-    console.log('working!')
 
     // fetch('http://api.cloudpublish.co.uk/')
     // .then(data => data.json())
@@ -10,7 +9,6 @@
     const searchField = document.querySelector('#searchInput');
     const responseContainer = document.querySelector('#responseContainer');
     const backToTop = document.querySelector('.back-to-top')
-    console.log(backToTop)
 
     // console.log(form, searchField, responseContainer);
 
@@ -98,7 +96,12 @@
 
     // FOR THE BACK TO TOP BUTTON
 
-    window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'));
+    // window.addEventListener('scroll', function(e) {
+    //     console.log('working');
+    // })
+
+    window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'))
+
 
     backToTop.addEventListener('click', () => {
         document.body.scrollTop = 0;

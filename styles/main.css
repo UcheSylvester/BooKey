@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     /* overflow: hidden; */
     overflow-x: hidden;
   }
@@ -193,6 +193,7 @@ figcaption em {
 /* BACK TO TOP BUTTON */
 
 .back-to-top {
+    transition: all 1s;
     background-color: inherit;
     position: fixed;
     bottom: 20px;
@@ -202,12 +203,15 @@ figcaption em {
     color: rgb(132, 132, 230);
 }
 
+.hide {
+    display: none;
+}
+
 .back-to-top:hover {
     transition: all 1s;
+    font-size: 3em;
     background-color: inherit;
     bottom: 40px;
-    
-    font-size: 3em;
     color: rgb(245, 245, 248);
 }
 
