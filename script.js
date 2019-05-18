@@ -121,7 +121,7 @@
     // Opens sideMenu by increasing its width and bringing down the main content
     function openSideMenu() {
         sideMenu.style.width = '100%';
-        mainContent.style.marginTop = '240px';
+        mainContent.style.marginTop = '260px';
 
         // mainContent.style.marginTop = '300px';
     }

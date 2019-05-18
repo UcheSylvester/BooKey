@@ -62,13 +62,11 @@ body, html {
     top: 0;
     left: 0;
     background-color: rgb(57, 57, 136);
-    /* background-color: #111; */
-    /* margin-top: 6em; */
-    opacity: 0.9;
+    opacity: 0.8;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     
@@ -78,14 +76,14 @@ body, html {
     padding: 10px 10px 10px 30px;
     text-decoration: none;
     font-size: 22px;
-    color: rgb(217, 217, 238);
+    color: #fff;
     display: block;
     transition: 0.5s;
     text-align: center;
 }
 
 .side-nav a:hover {
-    color: #fff;
+    font-size: 28px;
 }
 
 .side-nav .btn-close {
@@ -309,10 +307,6 @@ figcaption em {
 @media(min-width:570px) {
     .hamburger {
         display: none;
-    }
-
-    .nav {
-        text-align: center;
     }
 }
 
