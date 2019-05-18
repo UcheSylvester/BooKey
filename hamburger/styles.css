@@ -121,7 +121,7 @@ main {
     }
 }
 
-@media(min-width:511px) {
+@media(min-width:510px) {
     .hamburger {
         display: none;
     }
