@@ -302,6 +302,13 @@ figcaption em {
     .nav li {
         display: none;
     }
+
+    .back-to-top {
+        position: fixed;
+        bottom: 10px;
+        right: 0px;
+        font-size: 1.6em;
+    }
 }
 
 @media(min-width:570px) {
