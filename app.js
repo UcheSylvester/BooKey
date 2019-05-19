@@ -17,25 +17,26 @@
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
+        responseContainer.innerHTML = '<div id="loading"></div>';
 
-        // function rotate() {
+        console.dir(responseContainer);
+        const loadingBox = document.querySelector('#loading');
 
-        //     // setting the speed based on the current time, so as time increases, so does the rotate speed
-        //     responseContainer.innerHTML = '<div id="loading"></div>';
 
-        //     console.dir(responseContainer);
-        //     const loadingBox = document.querySelector('#loading');
+        function rotate() {
 
-        //     const speed = new Date().getMilliseconds();
-        //     // console.log(speed)
-        //     const currentDegree = (speed / 1000) * 360;
+            // setting the speed based on the current time, so as time increases, so does the rotate speed
+            // I THINK THERE IS STILL BETTER WAYS OF DOING THIS
+            const speed = new Date().getMilliseconds();
+            // console.log(speed)
+            const currentDegree = (speed / 1000) * 360;
 
-        //     loadingBox.style.transform = `rotate(${currentDegree}deg)`;
-        //     // console.log(currentDegree)
+            loadingBox.style.transform = `rotate(${currentDegree}deg)`;
+            // console.log(currentDegree)
 
-        // }
+        }
 
-        // setInterval(rotate, 10)
+        setInterval(rotate, 10)
 
 
         const searchedForText = searchField.value;
