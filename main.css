@@ -154,6 +154,26 @@ h1 {
 
 /* RESPONSE CONTAINER */
 
+div #loading {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    margin-top: 5em;
+    /* transform: rotate(90deg); */
+    transition: all 0.05s;
+    transition-timing-function: ease-in-out;
+    border-radius: 100%;
+}
+
+/* .rotate {
+    transition: all 0.5s;
+    transform: rotate(20deg);
+
+} */
+
 ul {
     list-style: none;
     text-align: center;

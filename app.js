@@ -1,3 +1,4 @@
+"use strict";
 
 (function() {
 
@@ -16,6 +17,27 @@
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
+
+        // function rotate() {
+
+        //     // setting the speed based on the current time, so as time increases, so does the rotate speed
+        //     responseContainer.innerHTML = '<div id="loading"></div>';
+
+        //     console.dir(responseContainer);
+        //     const loadingBox = document.querySelector('#loading');
+
+        //     const speed = new Date().getMilliseconds();
+        //     // console.log(speed)
+        //     const currentDegree = (speed / 1000) * 360;
+
+        //     loadingBox.style.transform = `rotate(${currentDegree}deg)`;
+        //     // console.log(currentDegree)
+
+        // }
+
+        // setInterval(rotate, 10)
+
+
         const searchedForText = searchField.value;
         console.log(searchedForText)
 
@@ -31,7 +53,7 @@
             const books = response.items;
 
             if(books) {
-                console.log(books)
+                // console.log(books)
 
                 // checking for initial search results and removing them
                 if(responseContainer.hasChildNodes()) {
@@ -82,12 +104,13 @@
         function requestError(e) {
             const errorMessage = `<div class="text-center error-message">A <em><strong>${e.message}</strong></em> occured... Please, check internet connection and try again</div>`;
             // console.dir(e, e.message)
+            console.dir(responseContainer)
+            console.log(responseContainer.hasChildNodes())
 
             if (!responseContainer.hasChildNodes()) {
                 responseContainer.insertAdjacentHTML('afterbegin', errorMessage);
             } else {
                 responseContainer.firstElementChild.remove();
-
                 responseContainer.insertAdjacentHTML('afterbegin', errorMessage);
             }
         }
@@ -102,6 +125,7 @@
 
     window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'));
 
+    
     backToTop.addEventListener('click', () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -113,7 +137,6 @@
     const closeButton = document.querySelector('.btn-close');
     const mainContent = document.querySelector('main');
     const sideMenu = document.querySelector('.side-nav');
-    console.log(hamburger, closeButton, mainContent, sideMenu);
 
     // When the hamburger is clicked, we call openSideMenu
     hamburger.addEventListener('click', openSideMenu);
@@ -136,3 +159,23 @@
 
 
 })()
+
+// function rotate() {
+//     const loadingBox = document.querySelector('#loading');
+//     console.log('hi')
+//     // console.log(window.getComputedStyle(loadingBox).transform)
+
+//     // setting the speed based on the current time, so as time increases, so does the rotate speed
+//     const speed = new Date().getMilliseconds()
+//     const currentDegree = (speed / 1000) * 360;
+//     // time = time ++
+//     // console.log(time, currentDegree)
+
+//     loadingBox.style.transform = `rotate(${currentDegree}deg)`;
+//     // const currentDegree = loadingBox.style.transform;
+//     // console.log(currentDegree)
+    
+// }
+
+// setInterval(rotate, 100)
+// rotate()
