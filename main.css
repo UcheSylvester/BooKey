@@ -164,7 +164,7 @@ div #loading {
     margin-top: 5em;
     /* transform: rotate(90deg); */
     transition: all 0.05s;
-    transition-timing-function: ease-in-out;
+    /* transition-timing-function: ease-in-out; */
     border-radius: 100%;
 }
 
