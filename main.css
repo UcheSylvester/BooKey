@@ -27,10 +27,12 @@ body, html {
   /* HEADER */
 
   header {
-      /* width: 100%; */
+      width: 100%;
       margin-top: -3em;
       padding: 0;
       background-color: white;
+      position: fixed;
+      
   }
 
 .pull-right{
