@@ -2,16 +2,10 @@
 
 (function() {
 
-    // fetch('http://api.cloudpublish.co.uk/')
-    // .then(data => data.json())
-    // .then(r => console.log(r))
-
     const form = document.querySelector('#searchForm');
     const searchField = document.querySelector('#searchInput');
     const responseContainer = document.querySelector('#responseContainer');
     const backToTop = document.querySelector('.back-to-top')
-
-    // console.log(form, searchField, responseContainer);
 
 
     form.addEventListener('submit', function(e) {
@@ -20,24 +14,21 @@
         responseContainer.innerHTML = '<div id="loading"></div>';
 
         console.dir(responseContainer);
-        const loadingBox = document.querySelector('#loading');
 
+        // ROTATING LOADING CIRCLE
+        const loading = document.querySelector('#loading');
+        let increasing = true,
+        currentDegree = 0,
+        increment = 50;
 
         function rotate() {
-
-            // setting the speed based on the current time, so as time increases, so does the rotate speed
-            // I THINK THERE IS STILL BETTER WAYS OF DOING THIS
-            const speed = new Date().getMilliseconds();
-            // console.log(speed)
-            const currentDegree = (speed / 1000) * 360;
-
-            loadingBox.style.transform = `rotate(${currentDegree}deg)`;
-            // console.log(currentDegree)
-
+            if(increasing) {
+                currentDegree += increment;
+                loading.style.transform = `rotate(${currentDegree}deg)`
+            }
         }
 
-        setInterval(rotate, 10)
-
+        setInterval(rotate, 100);
 
         const searchedForText = searchField.value;
         console.log(searchedForText)
@@ -65,7 +56,8 @@
                 }
 
             } else {
-                const errorMessage =  `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. Check back later</p>`;
+                // WHEN THERE IS NO BOOKS https://books.google.com/search?tbm=bks&q=${searchedForText}
+                const errorMessage =  `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. <em><strong><a href="https://books.google.com/search?tbm=bks&q=${searchedForText}">SEARCH DEEPER</a></strong></em></p>`;
                 // checking for initial search results and removing them
                 if(responseContainer.hasChildNodes()) {
                     responseContainer.firstElementChild.remove()
@@ -100,7 +92,7 @@
 
         }
 
-        // WHEN REQUEST FAILS
+        // WHEN REQUEST FAILS DUE TO NETWORK ERRORS
 
         function requestError(e) {
             const errorMessage = `<div class="text-center error-message">A <em><strong>${e.message}</strong></em> occured... Please, check internet connection and try again</div>`;
@@ -132,7 +124,7 @@
         document.documentElement.scrollTop = 0;
     })
 
-    // SIDE BAR
+    // SIDE (HAMBURGER) BAR
 
     const hamburger = document.querySelector('.hamburger');
     const closeButton = document.querySelector('.btn-close');
@@ -154,29 +146,24 @@
     
     function closeSideMenu() {
         sideMenu.style.width = '0px';
-        mainContent.style.marginTop = '0px'
+        mainContent.style.marginTop = '0px';
     }
-
 
 
 })()
 
+
+
+// const loading = document.querySelector('#loading');
+// let increasing = true,
+// currentDegree = 0,
+// increment = 50;
+
 // function rotate() {
-//     const loadingBox = document.querySelector('#loading');
-//     console.log('hi')
-//     // console.log(window.getComputedStyle(loadingBox).transform)
-
-//     // setting the speed based on the current time, so as time increases, so does the rotate speed
-//     const speed = new Date().getMilliseconds()
-//     const currentDegree = (speed / 1000) * 360;
-//     // time = time ++
-//     // console.log(time, currentDegree)
-
-//     loadingBox.style.transform = `rotate(${currentDegree}deg)`;
-//     // const currentDegree = loadingBox.style.transform;
-//     // console.log(currentDegree)
-    
+//     if(increasing) {
+//         currentDegree += increment;
+//         loading.style.transform = `rotate(${currentDegree}deg)`
+//     }
 // }
 
-// setInterval(rotate, 100)
-// rotate()
+// setInterval(rotate, 100);

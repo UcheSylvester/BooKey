@@ -1,9 +1,9 @@
-body, html {
+    body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    /* height: 100%; */
-    /* overflow: hidden; */
+    /* setting height would affect back to top feature; FIX THAT */
+    height: 100%;
     overflow-x: hidden;
   }
   
@@ -119,7 +119,7 @@ main {
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 3px;
-    margin-top: 1.5em;
+    margin-top: 2em;
     font-size: 4em;
     font-weight: 900;
     text-transform: uppercase
@@ -164,9 +164,9 @@ div #loading {
     border-left: 2px solid #fff;
     border-top: 2px solid #fff;
     margin-top: 5em;
-    /* transform: rotate(90deg); */
+    /* transform: rotate(0deg); */
     transition: all 0.05s;
-    /* transition-timing-function: ease-in-out; */
+    transition-timing-function: ease-in-out;
     border-radius: 100%;
 }
 
