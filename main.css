@@ -204,7 +204,6 @@ div .card:hover {
     box-shadow: inset 0 0 20px 0 rgba(245, 244, 244, 0.9);
     transition: all 0.7s;
     width: 55%;
-
 }
 
 
@@ -274,6 +273,17 @@ figcaption em {
     /* float: left;    */
 }
 
+.google-search {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.google-search a {
+    color: rgb(189, 189, 219);
+    font-style: italic;
+    font-weight: bold;
+    /* opacity: 0.8; */
+}
 
 /* BACK TO TOP BUTTON */
 

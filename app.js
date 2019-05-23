@@ -56,7 +56,7 @@
                 }
 
             } else {
-                // WHEN THERE IS NO BOOKS https://books.google.com/search?tbm=bks&q=${searchedForText}
+                // WHEN THERE IS NO BOOKS 
                 const errorMessage =  `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. <em><strong><a href="https://www.google.com/search?tbm=bks&q=${searchedForText}" target="_blank">Search deeper</a></strong></em></p>`;
                 // checking for initial search results and removing them
                 if(responseContainer.hasChildNodes()) {
@@ -69,7 +69,7 @@
 
             // TO DISPLAY BOOKS ON THE PAGE
             function displayBooks(books) {
-                htmlContent = '<ul>' + books.map(book => 
+                htmlContent = '<ul>' + (books.map(book => 
                     `<li>
                         <div class="card">
                             <figure>
@@ -84,7 +84,9 @@
                             </div>                            
                         </div>
                     </li>`
-                ).join('') + '</ul>'
+                ).join('') + 
+                `<p class="google-search">Couldn't find what you are looking for? <a href="https://www.google.com/search?tbm=bks&q=${searchedForText}" target="_blank">Search deeper</p>`) 
+                + '</ul>'
             }
 
             responseContainer.insertAdjacentHTML('afterbegin', htmlContent)
@@ -120,6 +122,26 @@
         document.documentElement.scrollTop = 0;
     })
 
+    // HEADER
+
+    // const header = document.querySelector('header');
+
+    // window.addEventListener('scroll', function() {
+
+    //     let lastScrollTop = 0;
+    //     let currentPosition = document.documentElement.scrollTop;
+    //     // console.log(currentPosition)
+    //     if(currentPosition > lastScrollTop) {
+    //         header.style.display = 'none';
+    //     } else {
+    //         header.style.display = 'inline-block'
+    //     }
+
+    //     lastScrollTop = (currentPosition <= 0) ? 0 : currentPosition;
+    // })
+
+
+
     // SIDE (HAMBURGER) BAR
 
     const hamburger = document.querySelector('.hamburger');
@@ -143,23 +165,10 @@
     function closeSideMenu() {
         sideMenu.style.width = '0px';
         mainContent.style.marginTop = '0px';
+    
     }
+
 
 
 })()
 
-
-
-// const loading = document.querySelector('#loading');
-// let increasing = true,
-// currentDegree = 0,
-// increment = 50;
-
-// function rotate() {
-//     if(increasing) {
-//         currentDegree += increment;
-//         loading.style.transform = `rotate(${currentDegree}deg)`
-//     }
-// }
-
-// setInterval(rotate, 100);
