@@ -3,7 +3,7 @@
     padding: 0;
     width: 100%;
     /* setting height would affect back to top feature; FIX THAT */
-    height: 100%;
+    /* height: 100%; */
     overflow-x: hidden;
   }
   

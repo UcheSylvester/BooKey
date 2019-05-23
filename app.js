@@ -18,8 +18,8 @@
         // ROTATING LOADING CIRCLE
         const loading = document.querySelector('#loading');
         let increasing = true,
-        currentDegree = 0,
-        increment = 50;
+            currentDegree = 0,
+            increment = 50;
 
         function rotate() {
             if(increasing) {
@@ -57,7 +57,7 @@
 
             } else {
                 // WHEN THERE IS NO BOOKS https://books.google.com/search?tbm=bks&q=${searchedForText}
-                const errorMessage =  `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. <em><strong><a href="https://books.google.com/search?tbm=bks&q=${searchedForText}">SEARCH DEEPER</a></strong></em></p>`;
+                const errorMessage =  `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. <em><strong><a href="https://www.google.com/search?tbm=bks&q=${searchedForText}" target="_blank">Search deeper</a></strong></em></p>`;
                 // checking for initial search results and removing them
                 if(responseContainer.hasChildNodes()) {
                     responseContainer.firstElementChild.remove()
@@ -111,10 +111,6 @@
 
 
     // FOR THE BACK TO TOP BUTTON
-
-    // window.addEventListener('scroll', function(e) {
-    //     console.log('working');
-    // })
 
     window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'));
 
