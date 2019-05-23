@@ -150,7 +150,8 @@ h1 {
     color: navy;
     border-radius: 5px;
     padding: 0.6em 1.5em; 
-    font-size: 20px;   
+    font-size: 20px; 
+    margin-left: 2em;  
 }
 
 
@@ -373,13 +374,15 @@ figcaption em {
 }
 
 
-#search-options {
-    margin-right: 1em;
-}
 
-#search-options label {
+
+.form-group label, span {
     color: white;
     font-size: 1.5em;
     font-weight: normal;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
+
 }
+
+
+
