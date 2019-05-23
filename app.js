@@ -11,9 +11,23 @@
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        responseContainer.innerHTML = '<div id="loading"></div>';
+        const searchedForText = searchField.value;
 
-        console.dir(responseContainer);
+        const sortOptions = Array.from(document.querySelectorAll('input[type="radio"]'));
+        console.log(sortOptions)
+
+        /**
+        ASSIGNING THE SORT BY VALUE 
+
+        let sortBy;
+        sortOptions.forEach(sortOption => sortOption.checked ? sortBy = sortOption.value : '');
+        **/
+
+        // OR using map and converting it to string using the join method
+        const sortBy = (sortOptions.map(sortOption => sortOption.checked ? sortOption.value : '')).join('');        
+        console.log(sortBy)
+
+        responseContainer.innerHTML = '<div id="loading"></div>';
 
         // ROTATING LOADING CIRCLE
         const loading = document.querySelector('#loading');
@@ -30,10 +44,11 @@
 
         setInterval(rotate, 100);
 
-        const searchedForText = searchField.value;
         console.log(searchedForText)
 
-        const booksAPI = `https://www.googleapis.com/books/v1/volumes?q=${searchedForText}+inauthor:keyes&key=AIzaSyCGJTXSKXeWA2MByvqJvx2EZZ7BZB71FSE`;
+        // const booksAPI = `https://www.googleapis.com/books/v1/volumes?q=${searchedForText}+inauthor:keyes&key=AIzaSyCGJTXSKXeWA2MByvqJvx2EZZ7BZB71FSE`;
+        const booksAPI = `https://www.googleapis.com/books/v1/volumes?q=${searchedForText}&orderBy=${sortBy}&printType=all&maxResults=30&key=AIzaSyCGJTXSKXeWA2MByvqJvx2EZZ7BZB71FSE`;
+        
         fetch(booksAPI)
             .then(data => data.json())
             .then(addContent)
@@ -45,7 +60,7 @@
             const books = response.items;
 
             if(books) {
-                // console.log(books)
+                console.log(books)
 
                 // checking for initial search results and removing them
                 if(responseContainer.hasChildNodes()) {
