@@ -169,6 +169,7 @@ div #loading {
     transition: all 0.05s;
     transition-timing-function: ease-in-out;
     border-radius: 100%;
+    margin-bottom: 2em;
 }
 
 /* .rotate {
