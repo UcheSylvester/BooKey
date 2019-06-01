@@ -136,26 +136,25 @@
 
     // HEADER
 
-    // const header = document.querySelector('header');
+    const header = document.querySelector('header');
+    let lastScrollTop = 0;
 
-    // window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
 
-    //     let lastScrollTop = 0;
-    //     let currentPosition = document.documentElement.scrollTop;
-    //     // console.log(currentPosition)
-    //     if(currentPosition > lastScrollTop) {
-    //         header.style.display = 'none';
-    //     } else {
-    //         header.style.display = 'inline-block'
-    //     }
+        let currentPosition = document.documentElement.scrollTop;
+        // console.log(currentPosition)
+        if(currentPosition > lastScrollTop) {
+            header.style.display = 'none';
+        } else {
+            header.style.display = 'inline-block'
+        }
 
-    //     lastScrollTop = (currentPosition <= 0) ? 0 : currentPosition;
-    // })
+        lastScrollTop = (currentPosition <= 0) ? 0 : currentPosition;
+    })
 
 
 
     // SIDE (HAMBURGER) BAR
-
     const hamburger = document.querySelector('.hamburger');
     const closeButton = document.querySelector('.btn-close');
     const mainContent = document.querySelector('main');
@@ -179,8 +178,6 @@
         mainContent.style.marginTop = '0px';
     
     }
-
-
 
 })()
 
