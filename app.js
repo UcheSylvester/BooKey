@@ -152,8 +152,6 @@
         lastScrollTop = (currentPosition <= 0) ? 0 : currentPosition;
     })
 
-
-
     // SIDE (HAMBURGER) BAR
     const hamburger = document.querySelector('.hamburger');
     const closeButton = document.querySelector('.btn-close');
