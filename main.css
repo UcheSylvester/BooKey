@@ -133,12 +133,11 @@ h1 {
 }
 
 /* search form */
-/* 
+
+
 #searchForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+    margin: auto 1em;
+}
 
 
 /* SearchInputs and Button */
@@ -374,17 +373,14 @@ figcaption em {
 
 }
 
-/* @media (max-width: 250px) {
+@media (max-width: 250px) {
     #searchInput {
         margin: 0;
     }
     #searchButton {
         margin: 0;
     }
-} */
-
-
-
+}
 
 .form-group label, span {
     color: white;
