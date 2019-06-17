@@ -1,6 +1,6 @@
 "use strict";
 
-(function() {
+(function () {
 
     const form = document.querySelector('#searchForm');
     const searchField = document.querySelector('#searchInput');
@@ -8,11 +8,11 @@
     const backToTop = document.querySelector('.back-to-top')
 
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
 
         const searchedForText = searchField.value;
-        
+
         /*** 
         const sortOptions = Array.from(document.querySelectorAll('input[type="radio"]'));
         console.log(sortOptions)
@@ -32,7 +32,7 @@
             increment = 50;
 
         function rotate() {
-            if(increasing) {
+            if (increasing) {
                 currentDegree += increment;
                 loading.style.transform = `rotate(${currentDegree}deg)`
             }
@@ -45,7 +45,7 @@
         // const booksAPI = `https://www.googleapis.com/books/v1/volumes?q=${searchedForText}&orderBy=${sortBy}&printType=all&maxResults=30&key=AIzaSyCGJTXSKXeWA2MByvqJvx2EZZ7BZB71FSE`;
         const booksAPI = `https://www.googleapis.com/books/v1/volumes?q=${searchedForText}&orderBy=newest&printType=all&maxResults=30&key=AIzaSyCGJTXSKXeWA2MByvqJvx2EZZ7BZB71FSE`;
         console.log(booksAPI)
-        
+
         fetch(booksAPI)
             .then(data => data.json())
             .then(addContent)
@@ -56,11 +56,11 @@
             let htmlContent = '';
             const books = response.items;
 
-            if(books) {
+            if (books) {
                 console.log(books)
 
                 // checking for initial search results and removing them
-                if(responseContainer.hasChildNodes()) {
+                if (responseContainer.hasChildNodes()) {
                     responseContainer.firstElementChild.remove()
                     displayBooks(books)
                 } else {
@@ -69,9 +69,9 @@
 
             } else {
                 // WHEN THERE IS NO BOOKS 
-                const errorMessage =  `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. <em><strong><a href="https://www.google.com/search?tbm=bks&q=${searchedForText}" target="_blank">Search deeper</a></strong></em></p>`;
+                const errorMessage = `<p class="text-center error-message">Sorry.... There is no books for <em>${searchedForText}</em>. <em><strong><a href="https://www.google.com/search?tbm=bks&q=${searchedForText}" target="_blank">Search deeper</a></strong></em></p>`;
                 // checking for initial search results and removing them
-                if(responseContainer.hasChildNodes()) {
+                if (responseContainer.hasChildNodes()) {
                     responseContainer.firstElementChild.remove()
                     htmlContent = errorMessage
                 } else {
@@ -81,7 +81,7 @@
 
             // TO DISPLAY BOOKS ON THE PAGE
             function displayBooks(books) {
-                htmlContent = '<ul>' + (books.map(book => 
+                htmlContent = '<ul>' + (books.map(book =>
                     `<li>
                         <div class="card">
                             <figure>
@@ -96,9 +96,9 @@
                             </div>                            
                         </div>
                     </li>`
-                ).join('') + 
-                `<p class="google-search">Couldn't find what you are looking for? <a href="https://www.google.com/search?tbm=bks&q=${searchedForText}" target="_blank">Search deeper</p>`) 
-                + '</ul>'
+                ).join('') +
+                    `<p class="google-search">Couldn't find what you are looking for? <a href="https://www.google.com/search?tbm=bks&q=${searchedForText}" target="_blank">Search deeper</p>`)
+                    + '</ul>'
             }
 
             responseContainer.insertAdjacentHTML('afterbegin', htmlContent)
@@ -128,7 +128,7 @@
 
     window.addEventListener('scroll', () => (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? backToTop.classList.remove('hide') : backToTop.classList.add('hide'));
 
-    
+
     backToTop.addEventListener('click', () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -139,11 +139,11 @@
     const header = document.querySelector('header');
     let lastScrollTop = 0;
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
 
         let currentPosition = document.documentElement.scrollTop;
         // console.log(currentPosition)
-        if(currentPosition > lastScrollTop) {
+        if (currentPosition > lastScrollTop) {
             header.style.display = 'none';
         } else {
             header.style.display = 'inline-block'
@@ -160,21 +160,21 @@
 
     // When the hamburger is clicked, we call openSideMenu
     hamburger.addEventListener('click', openSideMenu);
-    
+
     // Opens sideMenu by increasing its width and bringing down the main content
     function openSideMenu() {
         sideMenu.style.width = '100%';
-        mainContent.style.marginTop = '260px';
+        mainContent.style.marginTop = '280px';
 
         // mainContent.style.marginTop = '300px';
     }
 
     closeButton.addEventListener('click', closeSideMenu);
-    
+
     function closeSideMenu() {
         sideMenu.style.width = '0px';
         mainContent.style.marginTop = '0px';
-    
+
     }
 
 })()

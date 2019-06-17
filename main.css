@@ -54,7 +54,7 @@
 
 .hamburger svg {
     float: left;
-    margin: 1.5em 0 0 1.5em;
+    margin: 1em 0 0.5em 1em;
 }
 
 .side-nav {
@@ -131,6 +131,15 @@ h1 {
     color: rgb(231, 231, 240);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* search form */
+/* 
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 
 /* SearchInputs and Button */
 
@@ -365,14 +374,14 @@ figcaption em {
 
 }
 
-@media (max-width: 250px) {
+/* @media (max-width: 250px) {
     #searchInput {
         margin: 0;
     }
     #searchButton {
         margin: 0;
     }
-}
+} */
 
 
 
