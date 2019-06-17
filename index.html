@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="main.css">
 
+    <link rel="manifest" href="/manifest.json">
+
 </head>
+
 <body>
 
     <div class="container-fluid">
         <header>
             <nav>
                 <ul class="nav nav-pills">
-        
-                            <span class="hamburger">
-                                     <a href="#">
-                                        <svg width="30" height="30">
-                                            <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
-                                            <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
-                                            <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
-                        
-                                        </svg>
-                                    </a>
-                            </span>                    
+
+                    <span class="hamburger">
+                        <a href="#">
+                            <svg width="30" height="30">
+                                <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                                <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                                <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+
+                            </svg>
+                        </a>
+                    </span>
 
                     <li class="pull-right last"><a>Sign Up</a></li>
 
@@ -60,14 +64,14 @@
             </div>
 
             <!-- <div class="text-center"> -->
-                <form id="searchForm" class="text-center">
-                    <div class="form-group">
-                        <input required id="searchInput" type="search" placeholder="Search for books, article...">
-                        <button type="submit" id="searchButton"><strong>GO!</strong></button>
-                        
-                    </div>
-                    
-                    <!-- <div class="form-group">
+            <form id="searchForm" class="text-center">
+                <div class="form-group">
+                    <input required id="searchInput" type="search" placeholder="Search for books, article...">
+                    <button type="submit" id="searchButton"><strong>GO!</strong></button>
+
+                </div>
+
+                <!-- <div class="form-group">
                     
                         <span>Sort By:  </span>
                     
@@ -79,14 +83,14 @@
 
                         <button type="submit" id="searchButton"><strong>GO!</strong></button>
                     </div> -->
-                </form>
+            </form>
             <!-- </div> -->
 
             <!-- <div id="loading"></div> -->
 
             <div id="responseContainer"></div>
 
-        <button class="back-to-top fa fa-arrow-up hide" title="Move to top"></button>
+            <button class="back-to-top fa fa-arrow-up hide" title="Move to top"></button>
 
         </main>
 
@@ -97,4 +101,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
