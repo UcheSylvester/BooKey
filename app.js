@@ -179,3 +179,20 @@
 
 })()
 
+// adding service worker
+    // check for service worker
+    // register serviceWorker
+
+if('servicwWorker' in navigator) {
+    window.addEventListener('load', async() => {
+        try {
+            const registration = await navigator.serviceWorker.register('index.sw.js');
+            console.log('service worker registered sucessfully!')
+            console.log(`registered with scope: ${registration.scope}`)
+        } catch(e) {
+            debugger;
+            console.log('service worker registratio failed');
+            console.log(e)
+        }
+    })
+}
