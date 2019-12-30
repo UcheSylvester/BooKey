@@ -1,104 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>BooKey</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="Modernizing the habit of Reading!">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="description" content="Modernizing the habit of Reading!" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta
+      name="google-signin-client_id"
+      content="245803004661-8030jbpbru36eeg4kfqdobjj4iccq77p.apps.googleusercontent.com.apps.googleusercontent.com.apps.googleusercontent.com"
+    />
+    <meta name="google-signin-cookiepolicy" content="single_host_origin" />
+    <meta
+      name="google-signin-requestvisibleactions"
+      content="https://schema.org/AddAction"
+    />
+    <meta
+      name="google-signin-scope"
+      content="https://www.googleapis.com/auth/plus.login"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lobster"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="icon" type="image/png" href="images/logo.png" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
 
     <!-- Generated form realfavicongenerator.net -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#232375">
-    <meta name="msapplication-TileColor" content="#232375">
-    <meta name="theme-color" content="#232375">
-    <link rel="manifest" href="manifest.json">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#232375"
+    />
+    <meta name="msapplication-TileColor" content="#232375" />
+    <meta name="theme-color" content="#232375" />
+    <link rel="manifest" href="manifest.json" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico" />
     <!-- <link rel="icon" type="image/png" sizes="144x144" href="android-chrome-144x144.png"> -->
     <!-- <link rel="icon" type="image/png" sizes="152x152" href="apple-touch-icon.png"> -->
+  </head>
 
-
-</head>
-
-<body>
-
+  <body>
     <div class="container-fluid">
-        <header>
-            <nav>
-                <ul class="nav nav-pills">
+      <header>
+        <nav>
+          <ul class="nav nav-pills">
+            <span class="hamburger">
+              <a href="#">
+                <svg width="30" height="30">
+                  <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                  <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                  <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+                </svg>
+              </a>
+            </span>
 
-                    <span class="hamburger">
-                        <a href="#">
-                            <svg width="30" height="30">
-                                <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
-                                <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
-                                <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+            <li class="pull-right last"><a>Sign Up</a></li>
 
-                            </svg>
-                        </a>
-                    </span>
+            <li class="pull-right"><a href="#">LogIn</a></li>
 
-                    <li class="pull-right last"><a>Sign Up</a></li>
+            <li class="pull-right"><a href="#">Categories</a></li>
 
-                    <li class="pull-right"><a href="#">LogIn</a></li>
+            <li class="pull-right"><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </header>
 
-                    <li class="pull-right"><a href="#">Categories</a></li>
+      <!-- SIDE MENU -->
+      <div class="side-nav">
+        <a href="#" class="btn-close">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Sign Up</a>
+        <a href="#">LogIn</a>
+      </div>
 
-                    <li class="pull-right"><a href="#">Home</a></li>
-
-                </ul>
-
-            </nav>
-        </header>
-
-        <!-- SIDE MENU -->
-        <div class="side-nav">
-            <a href="#" class="btn-close">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">Categories</a>
-            <a href="#">Sign Up</a>
-            <a href="#">LogIn</a>
+      <main>
+        <div class="text-center">
+          <h1>BooKey</h1>
+          <h3 class="description">
+            Modernizing the Habit of Reading and Writing!
+            <p class="sign-in" style="color: red; cursor: pointer;">sign in</p>
+          </h3>
         </div>
 
-        <main>
-            <div class="text-center">
-                <h1>BooKey</h1>
-                <h3 class="description">Modernizing the Habit of Reading and Writing!</h3>
-            </div>
+        <!-- <div class="text-center"> -->
+        <form id="searchForm" class="text-center">
+          <!-- <label for="searchInput">Search for Books: (required) </label> -->
+          <div class="form-group">
+            <input
+              required
+              id="searchInput"
+              type="search"
+              placeholder="Search for books, article..."
+            />
+            <button type="submit" id="searchButton">
+              <strong>GO!</strong>
+            </button>
+          </div>
+        </form>
+        <!-- </div> -->
 
-            <!-- <div class="text-center"> -->
-            <form id="searchForm" class="text-center">
-                <!-- <label for="searchInput">Search for Books: (required) </label> -->
-                <div class="form-group">
-                    <input required id="searchInput" type="search" placeholder="Search for books, article...">
-                    <button type="submit" id="searchButton"><strong>GO!</strong></button>
+        <!-- <div id="loading"></div> -->
 
-                </div>
-            </form>
-            <!-- </div> -->
+        <div id="responseContainer"></div>
 
-            <!-- <div id="loading"></div> -->
-
-            <div id="responseContainer"></div>
-
-            <button class="back-to-top fa fa-arrow-up hide" title="Move to top"></button>
-
-        </main>
-
-
+        <button
+          class="back-to-top fa fa-arrow-up hide"
+          title="Move to top"
+        ></button>
+      </main>
     </div>
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="app.js"></script>
     <script src="manifest.js"></script>
-</body>
-
+  </body>
 </html>

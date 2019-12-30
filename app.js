@@ -1,5 +1,19 @@
 "use strict";
 
+const signIn = document.querySelector('.sign-in');
+signIn.addEventListener('click', onSignIn)
+
+function onSignIn() {
+    const googleUser = gapi.auth2.getAuthInstance().currentUser.get();
+    const profile = googleUser.getBasicProfile();
+
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+console.log('hello');
 (function () {
 
     const form = document.querySelector('#searchForm');
@@ -16,11 +30,11 @@
         /*** 
         const sortOptions = Array.from(document.querySelectorAll('input[type="radio"]'));
         console.log(sortOptions)
-
+ 
         // OR using map and converting it to string using the join method
         const sortBy = (sortOptions.map(sortOption => sortOption.checked ? sortOption.value : '')).join('');        
         console.log(sortBy)
-
+ 
         */
 
         responseContainer.innerHTML = '<div id="loading"></div>';
@@ -180,16 +194,16 @@
 })()
 
 // adding service worker
-    // check for service worker
-    // register serviceWorker
+// check for service worker
+// register serviceWorker
 
-if('servicwWorker' in navigator) {
-    window.addEventListener('load', async() => {
+if ('servicwWorker' in navigator) {
+    window.addEventListener('load', async () => {
         try {
             const registration = await navigator.serviceWorker.register('index.sw.js');
             console.log('service worker registered sucessfully!')
             console.log(`registered with scope: ${registration.scope}`)
-        } catch(e) {
+        } catch (e) {
             debugger;
             console.log('service worker registratio failed');
             console.log(e)
